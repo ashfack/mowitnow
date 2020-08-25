@@ -1,4 +1,4 @@
-# mowitnow
+# MowItNow
 
 Ce projet répond à un exercice technique donné en entretien chez Xebia.
 Ce projet s'inspire des différents projets visibles sur github de manière publique. Notamment https://github.com/gsaad/mowitnow et https://github.com/snilyes/mowitnow.
@@ -77,3 +77,5 @@ exemple un test automatisé)
 * Le sujet précise que pour un fichier en entrée, on attend en sortie une liste de positions finales, cependant, il fait omission de l'état de le pelouse (cellules tondues ou non). On peut donc se demander s'il faut à tout instant connaitre l'état intégral de la pelouse (donc gestion mémoire) ou s'il suffit de connaitre l'état courant de la tondeuse.<br />
 * Enfin, on peut se demander s'il ne devrait pas y avoir une gestion lorsque deux tondeuses sont amenées à occuper la même position sur la pelouse ou la gestion de l'état tondu, occupé et que faire si on retond une cellule déjà tondue.<br />
 * Pour finir, cette tondeuse reçoit des instructions à la française (G (gauche), D (droite), A (avancer)), il faudrait voir s'il ne faudrait pas gérér la paramétrisation de ces derniers, (L (left), R (right), F(forward)), étant donné que l'orientation est sur le système cardinal anglais. <br /> 
+
+* L'énoncé stipule qu'à la première ligne on donne les coordonnées du coin droit supérieur, la numérotation commençant à 0, cela signifie que la taille n'est pas x,y mais x+1, y+1
