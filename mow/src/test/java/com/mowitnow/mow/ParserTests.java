@@ -15,11 +15,13 @@ class ParserTests {
 
 	@Test
 	void isValidTondeuseLineOk() {
+		// #RG 012
 		assertTrue(Parser.isTondeuseLigne("3 3 S"));
 	}
 
 	@Test
 	void isValidTondeuseLineKo() {
+		// #RG 012
 		assertFalse(Parser.isTondeuseLigne("33S"));
 		assertFalse(Parser.isTondeuseLigne("S 3 3 S"));
 		assertFalse(Parser.isTondeuseLigne("3 3 S S"));
@@ -27,6 +29,7 @@ class ParserTests {
 
 	@Test
 	void tondeuseParserRaisesException() {
+		// #RG 012
 		MowItNowParserException exception = assertThrows(MowItNowParserException.class, () -> {
 			Parser.tondeuseParser("S 3 3 S", 5, 5);
 		});
@@ -35,11 +38,13 @@ class ParserTests {
 
 	@Test
 	void isValidInstructionsLineOk() {
+		// #RG 013
 		assertTrue(Parser.isInstructionsLigne("AAD"));
 	}
 
 	@Test
 	void isValidInstructionsLineKo() {
+		// #RG 013
 		assertFalse(Parser.isInstructionsLigne(("G A D")));
 		assertFalse(Parser.isInstructionsLigne("GDDE"));
 		assertFalse(Parser.isInstructionsLigne(""));
@@ -47,6 +52,7 @@ class ParserTests {
 
 	@Test
 	void instructionsParserRaisesException() {
+		// #RG 013
 		MowItNowParserException exception = assertThrows(MowItNowParserException.class, () -> {
 			Parser.instructionsParser("G A D");
 		});

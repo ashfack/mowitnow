@@ -4,6 +4,8 @@ package com.mowitnow.models;
  * @author Ashfack
  *
  *         Instruction valide pour la tondeuse
+ * 
+ *         #RG 007
  */
 public enum MowItNowInstruction {
 	/**

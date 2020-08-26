@@ -68,6 +68,7 @@ public class Tondeuse extends PositionTondeuse {
 			if (y + 1 < dim2) {
 				y = y + 1;
 			} else {
+				// #RG 008
 				log.warn(DEPLACEMENT_IMPOSSIBLE);
 				return false;
 			}
@@ -76,6 +77,7 @@ public class Tondeuse extends PositionTondeuse {
 			if (x + 1 < dim1) {
 				x = x + 1;
 			} else {
+				// #RG 008
 				log.warn(DEPLACEMENT_IMPOSSIBLE);
 				return false;
 			}
@@ -84,6 +86,7 @@ public class Tondeuse extends PositionTondeuse {
 			if (y > 0) {
 				y = y - 1;
 			} else {
+				// #RG 008
 				log.warn(DEPLACEMENT_IMPOSSIBLE);
 				return false;
 			}
@@ -92,6 +95,7 @@ public class Tondeuse extends PositionTondeuse {
 			if (x > 0) {
 				x = x - 1;
 			} else {
+				// #RG 008
 				log.warn(DEPLACEMENT_IMPOSSIBLE);
 				return false;
 			}

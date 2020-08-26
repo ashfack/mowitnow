@@ -12,16 +12,22 @@ import lombok.NoArgsConstructor;
 public class PositionTondeuse {
 	/**
 	 * Position x (relative à dim1)
+	 * 
+	 * #RG 002
 	 */
 	protected int x;
 
 	/**
 	 * Position y (relative à dim2)
+	 * 
+	 * #RG 002
 	 */
 	protected int y;
 
 	/**
 	 * Orientation tondeuse (N, E, W, S)
+	 * 
+	 * #RG 003
 	 */
 	protected Orientation orientationTondeuse;
 

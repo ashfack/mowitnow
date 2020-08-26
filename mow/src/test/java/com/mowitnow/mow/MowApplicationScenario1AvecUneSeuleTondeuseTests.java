@@ -26,6 +26,7 @@ class MowApplicationScenario1AvecUneSeuleTondeuseTests {
 		MowItNowOperator operator = new MowItNowOperator();
 		List<PositionTondeuse> positionTondeuses = operator.execution(scenario1);
 		assertEquals(1, positionTondeuses.size());
+		// #RG 015
 		PositionTondeuse expected = new PositionTondeuse(1, 3, Orientation.N, 6, 6);
 		assertEquals(expected, positionTondeuses.get(0));
 	}

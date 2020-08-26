@@ -12,6 +12,8 @@ import com.mowitnow.models.Tondeuse;
 public class Parser {
 
 	/**
+	 * #RG 010
+	 * 
 	 * @param ligne
 	 * @return xCoinDroitSuperieur de la pelouse
 	 * @throws MowItNowParserException : si la ligne ne contient pas 2 chiffres
@@ -32,6 +34,8 @@ public class Parser {
 	}
 
 	/**
+	 * #RG 010
+	 * 
 	 * @param ligne
 	 * @return yCoinDroitSuperieur de la pelouse
 	 * @throws MowItNowParserException : si la ligne ne contient pas 2 chiffres
@@ -85,6 +89,8 @@ public class Parser {
 	}
 
 	/**
+	 * #RG 006
+	 * 
 	 * @param ligne
 	 * @return true si la ligne ne contient que des MowItNowInstruction valide
 	 */
@@ -96,6 +102,8 @@ public class Parser {
 	}
 
 	/**
+	 * #RG 006
+	 * 
 	 * @param ligne
 	 * @return
 	 * @throws MowItNowParserException : si le moindre caractère n'est pas une
