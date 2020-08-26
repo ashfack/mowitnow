@@ -224,8 +224,6 @@ public class Pelouse {
 			}
 			break;
 		case E:
-			System.out.println(this.tondeuse.getX());
-			System.out.println(dim1);
 			if (this.tondeuse.getX() + 1 < dim1) {
 				this.cellules[tondeuse.getX()][tondeuse.getY()] = Cellule.TONDUE;
 				this.cellules[tondeuse.getX() + 1][tondeuse.getY()] = Cellule.TONDEUSE;
@@ -298,4 +296,12 @@ public class Pelouse {
 				tondeuse.getDim1(), tondeuse.getDim2());
 	}
 
+	/**
+	 * Pour résoudre le problème du singleton avec les tests unitaires
+	 */
+	public void endPelouse() {
+		this.isInitialisee = false;
+		this.isTondeuseEnCours = false;
+		this.tondeuse = null;
+	}
 }

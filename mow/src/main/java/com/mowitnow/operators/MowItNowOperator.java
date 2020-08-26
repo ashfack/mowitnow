@@ -57,6 +57,7 @@ public class MowItNowOperator {
 			log.info("Position finale ({}, {}, {})", tondeuse.getX(), tondeuse.getY(),
 					tondeuse.getOrientationTondeuse());
 		}
+		pelouse.endPelouse();
 		return positionTondeuses;
 	}
 
