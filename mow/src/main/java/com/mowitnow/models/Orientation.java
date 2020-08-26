@@ -5,6 +5,7 @@ package com.mowitnow.models;
  *
  *         Orientation valide de la tondeuse
  *
+ *         #RG 004
  */
 public enum Orientation {
 	/**

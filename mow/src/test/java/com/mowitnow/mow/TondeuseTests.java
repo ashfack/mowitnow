@@ -97,6 +97,7 @@ class TondeuseTests {
 
 		int xExpected = 3;
 		int yExpected = 4;
+		// #RG 009
 		assertTrue(comparePositionTondeuse(tondeuse, xExpected, yExpected));
 
 		/* Test2 : East */
@@ -133,6 +134,8 @@ class TondeuseTests {
 
 	@Test
 	void avancerKo() {
+		// #RG 008
+
 		/* Etat initial */
 		final int dim1 = 3;
 		final int dim2 = 3;

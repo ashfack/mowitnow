@@ -48,11 +48,16 @@ public class MowItNowOperator {
 
 		initPelouse(data, pelouse);
 		/* Gestion des lignes du fichier deux par deux */
+		// #RG 011
 		int nbTondeuses = (data.size() - 1) / 2;
+
+		// #RG 014
 		for (int numTondeuse = 0; numTondeuse < nbTondeuses; numTondeuse++) {
+			// #RG 012
 			Tondeuse tondeuse = initTondeuse(data, pelouse, numTondeuse);
 			log.info("Position initiale ({}, {}, {})", tondeuse.getX(), tondeuse.getY(),
 					tondeuse.getOrientationTondeuse());
+			// #RG 013
 			positionTondeuses.add(execInstructions(data, pelouse, numTondeuse));
 			log.info("Position finale ({}, {}, {})", tondeuse.getX(), tondeuse.getY(),
 					tondeuse.getOrientationTondeuse());
@@ -81,6 +86,7 @@ public class MowItNowOperator {
 	private Tondeuse initTondeuse(List<String> data, Pelouse pelouse, int numTondeuse)
 			throws MowItNowWorkException, MowItNowParserException, MowItNowAccesException {
 		/* Parsing lignes de tondeuse et init tondeuse */
+		// #RG 012
 		Tondeuse tondeuse = Parser.tondeuseParser(data.get(numTondeuse * 2 + 1), pelouse.getDim1(), pelouse.getDim2());
 		pelouse.initTondeuse(tondeuse);
 		return tondeuse;
@@ -91,6 +97,7 @@ public class MowItNowOperator {
 
 		/* Parsing lignes d'instructions et execution */
 		String ligneInstructions = data.get((numTondeuse + 1) * 2);
+		// #RG 013
 		List<MowItNowInstruction> instructions = Parser.instructionsParser(ligneInstructions);
 		PositionTondeuse positionTondeuse = pelouse.execInstructions(instructions);
 

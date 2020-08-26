@@ -23,6 +23,8 @@ public class Pelouse {
 	/**
 	 * La liste des cellules qui doivent par défaut être avec HERBE, pas de getter
 	 * pour éviter une modification externe
+	 * 
+	 * #RG 001
 	 */
 	private Cellule[][] cellules;
 
@@ -112,6 +114,7 @@ public class Pelouse {
 		if (null != this.tondeuse) {
 			this.cellules[this.tondeuse.getX()][this.tondeuse.getY()] = Cellule.TONDEUSE;
 		}
+		// #RG 014
 		if (isTondeuseEnCours) {
 			throw new MowItNowWorkException(MowItNowErrorMessages.INSTRUCTIONS_NON_TERMINEES);
 		}
@@ -136,6 +139,7 @@ public class Pelouse {
 	 * @throws MowItNowAccesException : si on cherche à accéder à une mauvaise case
 	 */
 	public void draw(boolean isCoordonneesAffichees) throws MowItNowAccesException {
+		// #RG 005, #RG 009
 		try {
 			StringBuilder sb = new StringBuilder("\n");
 			for (int j = dim2 - 1; j >= 0; j--) {
@@ -219,6 +223,7 @@ public class Pelouse {
 				this.cellules[tondeuse.getX()][tondeuse.getY()] = Cellule.TONDUE;
 				this.cellules[tondeuse.getX()][tondeuse.getY() + 1] = Cellule.TONDEUSE;
 			} else {
+				// #RG 008
 				log.warn(Symbols.DEPLACEMENT_IMPOSSIBLE);
 				return false;
 			}
@@ -228,6 +233,7 @@ public class Pelouse {
 				this.cellules[tondeuse.getX()][tondeuse.getY()] = Cellule.TONDUE;
 				this.cellules[tondeuse.getX() + 1][tondeuse.getY()] = Cellule.TONDEUSE;
 			} else {
+				// #RG 008
 				log.warn(Symbols.DEPLACEMENT_IMPOSSIBLE);
 				return false;
 			}
@@ -237,6 +243,7 @@ public class Pelouse {
 				this.cellules[tondeuse.getX()][tondeuse.getY()] = Cellule.TONDUE;
 				this.cellules[tondeuse.getX()][tondeuse.getY() - 1] = Cellule.TONDEUSE;
 			} else {
+				// #RG 008
 				log.warn(Symbols.DEPLACEMENT_IMPOSSIBLE);
 				return false;
 			}
@@ -246,6 +253,7 @@ public class Pelouse {
 				this.cellules[tondeuse.getX()][tondeuse.getY()] = Cellule.TONDUE;
 				this.cellules[tondeuse.getX() - 1][tondeuse.getY()] = Cellule.TONDEUSE;
 			} else {
+				// #RG 008
 				log.warn(Symbols.DEPLACEMENT_IMPOSSIBLE);
 				return false;
 			}
@@ -268,6 +276,8 @@ public class Pelouse {
 	}
 
 	/**
+	 * #RG 015
+	 * 
 	 * @param instructions
 	 * @return PositionTondeuse à la fin de l'exécution
 	 */
@@ -278,6 +288,8 @@ public class Pelouse {
 	}
 
 	/**
+	 * #RG 015
+	 * 
 	 * Après chaque instruction on dessine l'état du plateau
 	 * 
 	 * @param instructions
