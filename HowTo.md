@@ -30,3 +30,5 @@ java -jar mow-0.0.1.jar ../src/main/resources/xebia.txt
 Ou vous pouvez mettre un chemin absolu.
 
 Vous pouvez changer le niveau de log (conf de log) en utilisant un fichier de configuration externe comme simplelogger.properties présent dans les ressources.
+
+Il y a également grace aux github actions dans ce projet une compilation automatique à chaque push sur master et chaque merge request dessus.
