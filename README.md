@@ -79,3 +79,6 @@ exemple un test automatisé)
 * Pour finir, cette tondeuse reçoit des instructions à la française (G (gauche), D (droite), A (avancer)), il faudrait voir s'il ne faudrait pas gérér la paramétrisation de ces derniers, (L (left), R (right), F(forward)), étant donné que l'orientation est sur le système cardinal anglais. <br /> 
 
 * L'énoncé stipule qu'à la première ligne on donne les coordonnées du coin droit supérieur, la numérotation commençant à 0, cela signifie que la taille n'est pas x,y mais x+1, y+1
+
+
+Des tests unitaires ont été faits, il est important de vérifier la platerforme (par rapport au chemin). Le code est fait pour tourner sur environnement windows.
