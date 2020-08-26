@@ -46,5 +46,5 @@ celles du coin inférieur gauche sont supposées être (0,0).
 **RG 014**:
 >Chaque tondeuse se déplace de façon séquentielle, ce qui signifie que la seconde tondeuse ne bouge que lorsque la première a exécuté intégralement sa série d'instructions.
 
-** RG 015**:
+**RG 015**:
 >Lorsqu'une tondeuse achève une série d'instruction, elle communique sa position et son orientation.
