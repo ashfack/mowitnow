@@ -15,6 +15,7 @@
 		<java.version>14</java.version>
 		<maven.compiler.source>14</maven.compiler.source>
 		<maven.compiler.target>14</maven.compiler.target>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>
@@ -25,14 +26,18 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>2.0.0-alpha1</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
 			<version>2.0.0-alpha1</version>
-			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.5.6</version>
+		</dependency>
 
 
 		<dependency>
@@ -67,9 +72,35 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.3.3.RELEASE</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.mowitnow.mow.MowApplication</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+				<executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+            </executions>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.1</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.mowitnow.mow.MowApplication</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 			</plugin>
 
 		</plugins>

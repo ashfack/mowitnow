@@ -25,8 +25,8 @@ import lombok.extern.slf4j.Slf4j;
 public class MowItNowOperator {
 
 	/**
-	 * Procède au chargement du nom de fichier passsé en paramètre et initialise la
-	 * pelouse et traite les tondeuses une par une
+	 * Procède au chargement du nom de fichier passsé en paramètre et initialise
+	 * la pelouse et traite les tondeuses une par une
 	 * 
 	 * @param nomFichierAvecChemin
 	 * @return List<PositionTondeuse> positionTondeuses : la liste des positions des
@@ -55,7 +55,7 @@ public class MowItNowOperator {
 		for (int numTondeuse = 0; numTondeuse < nbTondeuses; numTondeuse++) {
 			// #RG 012
 			Tondeuse tondeuse = initTondeuse(data, pelouse, numTondeuse);
-			log.info("Position initiale ({}, {}, {})", tondeuse.getX(), tondeuse.getY(),
+			log.debug("Position initiale ({}, {}, {})", tondeuse.getX(), tondeuse.getY(),
 					tondeuse.getOrientationTondeuse());
 			// #RG 013
 			positionTondeuses.add(execInstructions(data, pelouse, numTondeuse));
@@ -69,8 +69,8 @@ public class MowItNowOperator {
 	/**
 	 * @param data    : liste des lignes
 	 * @param pelouse
-	 * @throws MowItNowWorkException   : peut échouer si on a problème de parsing ou
-	 *                                 si la pelouse a déjà été initialisée
+	 * @throws MowItNowWorkException   : peut échouer si on a problème de parsing
+	 *                                 ou si la pelouse a déjà été initialisée
 	 * @throws MowItNowParserException : si la ligne ne contient pas 2 chiffres
 	 *                                 séparés par un espace
 	 */

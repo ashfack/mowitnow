@@ -128,7 +128,8 @@ public class Pelouse {
 	}
 
 	/**
-	 * @throws MowItNowAccesException : si on cherche à accéder à une mauvaise case
+	 * @throws MowItNowAccesException : si on cherche à accéder à une mauvaise
+	 *                                case
 	 */
 	public void draw() throws MowItNowAccesException {
 		this.draw(false);
@@ -136,7 +137,8 @@ public class Pelouse {
 
 	/**
 	 * @param isCoordonneesAffichees : pour voir les coordonnées entre parenthèses
-	 * @throws MowItNowAccesException : si on cherche à accéder à une mauvaise case
+	 * @throws MowItNowAccesException : si on cherche à accéder à une mauvaise
+	 *                                case
 	 */
 	public void draw(boolean isCoordonneesAffichees) throws MowItNowAccesException {
 		// #RG 005, #RG 009
@@ -176,8 +178,8 @@ public class Pelouse {
 	/**
 	 * Au sein d'une pelouse, on a une cellule de type Cellule, mais quand on veut
 	 * dessiner/afficher le contenu d'une cellule avec tondeuse alors on a besoin de
-	 * l'orientation. D'où la méthode qui gère l'orientation si tondeuse et on veut
-	 * que chaque "cellule" soit de même taille à l'affichage.
+	 * l'orientation. D'où la méthode qui gère l'orientation si tondeuse et on
+	 * veut que chaque "cellule" soit de même taille à l'affichage.
 	 * 
 	 * @param o : Orientation ou Cellule
 	 * @return Le contenu de la cellule à un format exploitable
@@ -264,7 +266,8 @@ public class Pelouse {
 
 	/**
 	 * @param instruction
-	 * @return le statut de l'éxécution (peut être à false si déplacement hors zone)
+	 * @return le statut de l'éxécution (peut être à false si déplacement hors
+	 *         zone)
 	 */
 	private boolean execInstruction(MowItNowInstruction instruction) {
 		if (instruction != MowItNowInstruction.A) {
@@ -278,24 +281,12 @@ public class Pelouse {
 	/**
 	 * #RG 015
 	 * 
-	 * @param instructions
-	 * @return PositionTondeuse à la fin de l'exécution
-	 */
-	public PositionTondeuse execInstructions(List<MowItNowInstruction> instructions) {
-		instructions.forEach(instruction -> execInstruction(instruction));
-		return new PositionTondeuse(tondeuse.getX(), tondeuse.getY(), tondeuse.getOrientationTondeuse(),
-				tondeuse.getDim1(), tondeuse.getDim2());
-	}
-
-	/**
-	 * #RG 015
-	 * 
 	 * Après chaque instruction on dessine l'état du plateau
 	 * 
 	 * @param instructions
 	 * @return PositionTondeuse à la fin de l'exécution
 	 */
-	public PositionTondeuse execInstructionsDebug(List<MowItNowInstruction> instructions) {
+	public PositionTondeuse execInstructions(List<MowItNowInstruction> instructions) {
 		instructions.forEach(instruction -> {
 			execInstruction(instruction);
 			try {
