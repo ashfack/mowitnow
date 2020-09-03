@@ -48,3 +48,7 @@ celles du coin inférieur gauche sont supposées être (0,0).
 
 **RG 015**:
 >Lorsqu'une tondeuse achève une série d'instruction, elle communique sa position et son orientation.
+
+**RG 016**:
+>Lorsqu'une tondeuse doit gérer une instruction pour avancer et qu'une tondeuse y existe déjà, il faut ignorer l'instruction (la position et l'orientation reste inchangées). Afficher un message de warning.
+
