@@ -222,8 +222,13 @@ public class Pelouse {
 		switch (this.tondeuse.getOrientationTondeuse()) {
 		case N:
 			if (this.tondeuse.getY() + 1 < dim2) {
+				if (Cellule.TONDEUSE == this.cellules[tondeuse.getX()][tondeuse.getY() + 1]) {
+					log.warn("Case occupée");
+					return false;
+				} else {
 				this.cellules[tondeuse.getX()][tondeuse.getY()] = Cellule.TONDUE;
 				this.cellules[tondeuse.getX()][tondeuse.getY() + 1] = Cellule.TONDEUSE;
+				}
 			} else {
 				// #RG 008
 				log.warn(Symbols.DEPLACEMENT_IMPOSSIBLE);
