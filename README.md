@@ -82,3 +82,5 @@ exemple un test automatisé)
 
 
 Des tests unitaires ont été faits, il est important de vérifier la platerforme (par rapport au chemin). Le code est fait pour tourner sur environnement windows.
+
+A suivre
